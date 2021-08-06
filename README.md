@@ -4,6 +4,9 @@
 
 A [Flarum](http://flarum.org) extension. Simple Calendar Widget for Flarum
 
+![example](https://user-images.githubusercontent.com/79002016/128385949-0e6c5261-8e2d-449b-b600-f38db314a37b.png)
+
+
 ## Installation
 
 Install with composer:

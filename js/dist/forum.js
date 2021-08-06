@@ -1,2 +1,332 @@
-module.exports=function(e){var t={};function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}return n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)n.d(r,o,function(t){return e[t]}.bind(null,o));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=4)}([function(e,t){e.exports=flarum.core.compat["extensions/afrux-forum-widgets-core/common/extend/Widgets"]},function(e,t){e.exports=flarum.core.compat["extensions/afrux-forum-widgets-core/common/components/Widget"]},function(e,t,n){"use strict";var r=n(0),o=n.n(r);function a(e,t){return(a=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e})(e,t)}var i=n(1),u=function(e){var t,n;function r(){return e.apply(this,arguments)||this}n=e,(t=r).prototype=Object.create(n.prototype),t.prototype.constructor=t,a(t,n);var o=r.prototype;return o.oncreate=function(e){var t=function(e,t){document.querySelector(e).innerText=t},n=function(e){var t=new Date;return{dayNumber:t.getDate(),month:t.getMonth(),dayName:t.toLocaleString(e,{weekday:"long"}),monthName:t.toLocaleString(e,{month:"long"}),year:t.getFullYear()}}(navigator.language),r=n.dayNumber,o=(n.month,n.dayName),a=n.monthName,i=n.year;t("#monthName",a),t("#dayName",o),t("#dayNumber",r),t("#year",i)},o.className=function(){return"simple-calendar-widget AfruxWidgets-Widget--flat"},o.icon=function(){return"far fa-calendar-alt"},o.content=function(){app.translator.trans("justoverclock-simple-calendar-widget.forum.loading");return m("div",{class:"calendar"},m("div",{id:"monthName"}),m("div",{id:"dayName"}),m("div",{id:"dayNumber"}),m("div",{id:"year"}))},r}(n.n(i).a);t.a=function(e){(new o.a).add({key:"SimpleCal",component:u,isDisabled:!1,isUnique:!0,placement:"end",position:1}).extend(e,"justoverclock-simple-calendar-widget")}},function(e,t){e.exports=flarum.core.compat["forum/app"]},function(e,t,n){"use strict";n.r(t);var r=n(3),o=n.n(r),a=n(2);o.a.initializers.add("justoverclock/simple-calendar-widget",(function(){Object(a.a)(o.a)}))}]);
+module.exports =
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./forum.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./forum.js":
+/*!******************!*\
+  !*** ./forum.js ***!
+  \******************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _src_forum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/forum */ "./src/forum/index.js");
+/* empty/unused harmony star reexport */
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _inheritsLoose; });
+/* harmony import */ var _setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./setPrototypeOf.js */ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js");
+
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  Object(_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__["default"])(subClass, superClass);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _setPrototypeOf; });
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+
+/***/ }),
+
+/***/ "./src/common/components/SimpleCalendarWidget.js":
+/*!*******************************************************!*\
+  !*** ./src/common/components/SimpleCalendarWidget.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SimpleCalendarWidget; });
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var flarum_extensions_afrux_forum_widgets_core_common_components_Widget__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flarum/extensions/afrux-forum-widgets-core/common/components/Widget */ "flarum/extensions/afrux-forum-widgets-core/common/components/Widget");
+/* harmony import */ var flarum_extensions_afrux_forum_widgets_core_common_components_Widget__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_extensions_afrux_forum_widgets_core_common_components_Widget__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/*
+ * This file is part of justoverclock/last-tweet.
+ *
+ * Copyright (c) 2021 Marco Colia.
+ * https://flarum.it
+ *
+ * For the full copyright and license information, please view the LICENSE.md
+ * file that was distributed with this source code.
+ */
+
+
+var SimpleCalendarWidget = /*#__PURE__*/function (_Widget) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(SimpleCalendarWidget, _Widget);
+
+  function SimpleCalendarWidget() {
+    return _Widget.apply(this, arguments) || this;
+  }
+
+  var _proto = SimpleCalendarWidget.prototype;
+
+  _proto.oncreate = function oncreate(vnode) {
+    var lang = navigator.language;
+
+    var getActualDate = function getActualDate(lang) {
+      var date = new Date();
+      var dayNumber = date.getDate();
+      var month = date.getMonth();
+      var dayName = date.toLocaleString(lang, {
+        weekday: "long"
+      });
+      var monthName = date.toLocaleString(lang, {
+        month: "long"
+      });
+      var year = date.getFullYear();
+      return {
+        dayNumber: dayNumber,
+        month: month,
+        dayName: dayName,
+        monthName: monthName,
+        year: year
+      };
+    };
+
+    var innerText = function innerText(el, text) {
+      document.querySelector(el).innerText = text;
+    };
+
+    var _getActualDate = getActualDate(lang),
+        dayNumber = _getActualDate.dayNumber,
+        month = _getActualDate.month,
+        dayName = _getActualDate.dayName,
+        monthName = _getActualDate.monthName,
+        year = _getActualDate.year;
+
+    innerText("#monthName", monthName);
+    innerText("#dayName", dayName);
+    innerText("#dayNumber", dayNumber);
+    innerText("#year", year);
+  };
+
+  _proto.className = function className() {
+    return 'simple-calendar-widget AfruxWidgets-Widget--flat';
+  };
+
+  _proto.icon = function icon() {
+    // Widget icon.
+    return 'far fa-calendar-alt';
+  };
+
+  _proto.content = function content() {
+    var isLoading = app.translator.trans('justoverclock-simple-calendar-widget.forum.loading');
+    return m("div", {
+      "class": "calendar"
+    }, m("div", {
+      id: "monthName"
+    }), m("div", {
+      id: "dayName"
+    }), m("div", {
+      id: "dayNumber"
+    }), m("div", {
+      id: "year"
+    }));
+  };
+
+  return SimpleCalendarWidget;
+}(flarum_extensions_afrux_forum_widgets_core_common_components_Widget__WEBPACK_IMPORTED_MODULE_1___default.a);
+
+
+
+/***/ }),
+
+/***/ "./src/common/registerWidget.js":
+/*!**************************************!*\
+  !*** ./src/common/registerWidget.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var flarum_extensions_afrux_forum_widgets_core_common_extend_Widgets__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flarum/extensions/afrux-forum-widgets-core/common/extend/Widgets */ "flarum/extensions/afrux-forum-widgets-core/common/extend/Widgets");
+/* harmony import */ var flarum_extensions_afrux_forum_widgets_core_common_extend_Widgets__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_extensions_afrux_forum_widgets_core_common_extend_Widgets__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_SimpleCalendarWidget__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/SimpleCalendarWidget */ "./src/common/components/SimpleCalendarWidget.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (app) {
+  new flarum_extensions_afrux_forum_widgets_core_common_extend_Widgets__WEBPACK_IMPORTED_MODULE_0___default.a().add({
+    key: 'SimpleCal',
+    component: _components_SimpleCalendarWidget__WEBPACK_IMPORTED_MODULE_1__["default"],
+    isDisabled: false,
+    isUnique: true,
+    placement: 'end',
+    position: 1
+  }).extend(app, 'justoverclock-simple-calendar-widget');
+});
+
+/***/ }),
+
+/***/ "./src/forum/index.js":
+/*!****************************!*\
+  !*** ./src/forum/index.js ***!
+  \****************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var flarum_forum_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flarum/forum/app */ "flarum/forum/app");
+/* harmony import */ var flarum_forum_app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_forum_app__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _common_registerWidget__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../common/registerWidget */ "./src/common/registerWidget.js");
+
+
+flarum_forum_app__WEBPACK_IMPORTED_MODULE_0___default.a.initializers.add('justoverclock/simple-calendar-widget', function () {
+  Object(_common_registerWidget__WEBPACK_IMPORTED_MODULE_1__["default"])(flarum_forum_app__WEBPACK_IMPORTED_MODULE_0___default.a);
+});
+
+/***/ }),
+
+/***/ "flarum/extensions/afrux-forum-widgets-core/common/components/Widget":
+/*!*****************************************************************************************************!*\
+  !*** external "flarum.core.compat['extensions/afrux-forum-widgets-core/common/components/Widget']" ***!
+  \*****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['extensions/afrux-forum-widgets-core/common/components/Widget'];
+
+/***/ }),
+
+/***/ "flarum/extensions/afrux-forum-widgets-core/common/extend/Widgets":
+/*!**************************************************************************************************!*\
+  !*** external "flarum.core.compat['extensions/afrux-forum-widgets-core/common/extend/Widgets']" ***!
+  \**************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['extensions/afrux-forum-widgets-core/common/extend/Widgets'];
+
+/***/ }),
+
+/***/ "flarum/forum/app":
+/*!**************************************************!*\
+  !*** external "flarum.core.compat['forum/app']" ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['forum/app'];
+
+/***/ })
+
+/******/ });
 //# sourceMappingURL=forum.js.map

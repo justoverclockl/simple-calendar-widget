@@ -55,7 +55,6 @@ export default class SimpleCalendarWidget extends Widget {
 
 
   content() {
-    const isLoading = app.translator.trans('justoverclock-simple-calendar-widget.forum.loading');
     return (
     <div class="calendar">
       <div id="monthName"></div>

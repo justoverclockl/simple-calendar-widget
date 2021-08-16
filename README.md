@@ -19,7 +19,6 @@ composer require justoverclock/simple-calendar-widget:"*"
 
 ```sh
 composer update justoverclock/simple-calendar-widget:"*"
-php flarum migrate
 php flarum cache:clear
 ```
 
